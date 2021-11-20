@@ -9,12 +9,12 @@ public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int employeeId;
-    private int name;
-    private int location;
-    private int department;
+    private String name;
+    private String location;
+    private String department;
 
-    public Employee(int id, int name, int location, int department) {
-        employeeId = id;
+    public Employee(int employeeId, String name, String location, String department) {
+        this.employeeId = employeeId;
         this.name = name;
         this.location = location;
         this.department = department;
@@ -32,27 +32,27 @@ public class Employee {
         this.employeeId = employeeId;
     }
 
-    public int getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(int name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public int getLocation() {
+    public String getLocation() {
         return location;
     }
 
-    public void setLocation(int location) {
+    public void setLocation(String location) {
         this.location = location;
     }
 
-    public int getDepartment() {
+    public String getDepartment() {
         return department;
     }
 
-    public void setDepartment(int department) {
+    public void setDepartment(String department) {
         this.department = department;
     }
 }
